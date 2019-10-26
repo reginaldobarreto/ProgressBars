@@ -1,11 +1,13 @@
-# APP
+# ProgressBars
 
 ## Sobre o APP 
-Esse aplicativo xxxxxx
+Esse aplicativo tem como objetivo mostras progressBars e seus formatos
 ## Conhecimento aplicado
-* xxxx
-* xxxx
-* xxxx
+* Butter Knife
+* Buttons
+* Java (AsyncTask)
+* Thread
+* ProgressBars
 
 ## Screeshots
 
