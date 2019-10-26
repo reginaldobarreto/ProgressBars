@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ProgressBars</string>
-    <string name="btn_progressbar_circular">ProgressBar</string>
+    <string name="btn_progressbar_circular">Circular Progress</string>
+    <string name="btn_progressbar_bar">Bar Progress</string>
 </resources>
