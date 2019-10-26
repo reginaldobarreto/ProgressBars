@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import java.util.Random;
+
 class ProgressBarAsync extends AsyncTask<Void,Integer,Void> {
 
 
@@ -46,6 +48,7 @@ class ProgressBarAsync extends AsyncTask<Void,Integer,Void> {
     @Override
     protected void onProgressUpdate(Integer... values) {
         progressBar.setProgress(values[0]);
+        progressBar.setSecondaryProgress(values[0]+7);
         super.onProgressUpdate(values);
     }
 
