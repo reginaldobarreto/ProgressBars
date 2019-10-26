@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     @BindView(R.id.circular_progress)
     ProgressBar progressBar;
+    @BindView(R.id.button1)
+    Button button1;
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar1;
     ProgressBarAsync progressBarAsync;
 
 
@@ -31,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         progressBar.setVisibility(View.GONE);
+        progressBar1.setVisibility(View.GONE);
 
     }
 
@@ -44,5 +49,13 @@ public class MainActivity extends AppCompatActivity {
         progressBarAsync.execute();
     }
 
+    @OnClick(R.id.button1)
+    public void submit1(View view){
+        // TODO submit data to server...
+        Toast.makeText(getApplicationContext(),"ProgressBar Start",Toast.LENGTH_SHORT).show();
+        progressBarAsync = new ProgressBarAsync(view);
+        progressBarAsync.setProgressBar(progressBar1);
+        progressBarAsync.execute();
+    }
 
 }

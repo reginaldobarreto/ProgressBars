@@ -34,12 +34,19 @@ class ProgressBarAsync extends AsyncTask<Void,Integer,Void> {
         for (int i = 0; i < 100; i++) {
             try {
                 Thread.sleep(50);
+                publishProgress(i);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
         Log.i(TAG, "doInBackground: ");
         return null;
+    }
+
+    @Override
+    protected void onProgressUpdate(Integer... values) {
+        progressBar.setProgress(values[0]);
+        super.onProgressUpdate(values);
     }
 
     @Override
