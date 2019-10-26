@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     @BindView(R.id.circular_progress)
     ProgressBar progressBar;
+    ProgressBarAsync progressBarAsync;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +39,10 @@ public class MainActivity extends AppCompatActivity {
         // TODO submit data to server...
 
         Toast.makeText(getApplicationContext(),"ProgressBar Start",Toast.LENGTH_SHORT).show();
-        progressBarCounter();
+        progressBarAsync = new ProgressBarAsync(view);
+        progressBarAsync.setProgressBar(progressBar);
+        progressBarAsync.execute();
     }
 
-    private void progressBarCounter() {
-
-        progressBar.setVisibility(View.VISIBLE);
-    }
 
 }
